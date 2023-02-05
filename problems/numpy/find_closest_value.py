@@ -13,7 +13,21 @@ def find_closest_value(x):
     
     # YOUR CODE HERE
     # Replace None with an appropriate return value
-    return None
+    smallest_delta = np.max(x) + 1
+    mean = x.sum() / len(x)
+    position = 0
+    closest = 0
+
+    for index, value in enumerate(x):
+        if value == mean:
+            return (index, value)
+        
+        if abs(value - mean) < smallest_delta:
+            smallest_delta = abs(value - mean)
+            position = index
+            closest = value
+
+    return (position, closest)
     
 
 #############################################################

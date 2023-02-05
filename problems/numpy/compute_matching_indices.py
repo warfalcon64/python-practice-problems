@@ -11,7 +11,15 @@ def compute_matching_indices(x, y):
 
     # YOUR CODE HERE
     # Replace None with an appropriate return value
-    return None
+    indices = []
+
+    for index, value in enumerate(x):
+        if value == y[index]:
+            indices.append(index)
+
+    indices.sort()
+
+    return np.array(indices)
     
 
 #############################################################

@@ -12,8 +12,15 @@ def powers(N, p):
 
     # YOUR CODE HERE
     # Replace None with an appropriate return value
-    return None
+    base = np.ones(N)
+    result = []
 
+    for index, num in enumerate(base):
+        result.append(num * (p**index))
+
+    return np.array(result)
+
+    
 
 #############################################################
 ###                                                       ###
